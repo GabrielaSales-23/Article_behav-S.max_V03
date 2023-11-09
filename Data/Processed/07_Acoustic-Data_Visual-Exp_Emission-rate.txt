@@ -1,0 +1,10 @@
+Name 	Sex	Treatment	N_treatment	Freq_treatment	Repetition_rate
+M06	M	100	1	0.037037037	0.2
+M06	M	50	10	0.37037037	2
+M06	M	0	16	0.592592593	3.2
+M08	M	0	1	1	0.2
+M11	M	100	2	1	0.4
+M07	M	100	1	1	0.2
+M12	M	50	1	1	0.2
+F14	F	0	5	1	1
+F08	F	0	2	1	0.4

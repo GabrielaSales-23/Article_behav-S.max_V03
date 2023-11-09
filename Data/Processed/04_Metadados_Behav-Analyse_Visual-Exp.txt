@@ -1,0 +1,24 @@
+AttributeName	AttributeDefinition
+ID	Identity code give to it individual
+Name	Name give to it individual
+Sex	Individual's sex (male or female)
+Treatment	Experimental treatment with different levels of visual information
+t_limp	"Duration (s) of emission of the behavior ""Autopreening"""
+n_limb	"Frequency of emission of the behavior ""Bill cleaning"""
+n_abeb	"Frequency of emission of the behavior ""Bill opening"""
+n_trec	"Frequency of emission of the behavior ""Feather settling"""
+n_and	"Frequency of emission of the behavior ""Walking on the perch"""
+n_vooc	"Frequency of emission of the behavior ""Flight"""
+n_pulp	"Frequency of emission of the behavior ""Jump between perches"""
+n_darp	"Frequency of emission of the behavior ""Jumping laterally"""
+t_com	"Duration (s) of emission of the behavior ""Eating"""
+n_def	"Frequency of emission of the behavior ""Defecation"""
+t_beb	"Duration (s) of emission of the behavior ""Drinking"""
+t_for	"Duration (s) of emission of the behavior ""Foragin"""
+t_obs	"Duration (s) of emission of the behavior ""Vigilance"""
+n_pulo	"Frequency of emission of the behavior ""Jump on the perch changing orientation"""
+n_estp	"Frequency of emission of the behavior ""Stretching neck"""
+t_cant	"Duration (s) of emission of the behavior ""Singing"""
+n_vocc	"Frequency of emission of the behavior ""Call"""
+t_rel	"Duration (s) of emission of the behavior ""Perching"""
+n_conf	"Frequency of emission of the behavior ""Confrontation"""
