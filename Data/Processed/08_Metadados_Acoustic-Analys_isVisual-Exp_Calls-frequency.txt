@@ -1,0 +1,8 @@
+AttributesName	AttributesDefinition
+Name	Name give to it individual
+Sex	Individual's sex (male or female)
+Treatment	Experimental treatment with different levels of visual information
+Freq25	Frequency at 25 of the call entropy (Hz)
+Freq75	Frequency at 75 of the call entropy (Hz)
+PeakFreq	Peak frequency of the call (Hz)
+N_treatment	Number of calls in each treatment

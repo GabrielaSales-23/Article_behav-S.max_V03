@@ -1,0 +1,6 @@
+AttributesName	AttributesDefinition
+Name	Name give to it individual
+Sex	Individual's sex (male or female)
+Treatment	Experimental treatment with different levels of visual information
+Freq_treatment	Frequence of calls emited in each treatment (0 to 1)
+Repetition_rate	Number of calls emited per minute 

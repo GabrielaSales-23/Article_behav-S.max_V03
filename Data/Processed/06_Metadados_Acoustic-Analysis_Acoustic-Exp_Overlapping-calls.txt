@@ -1,0 +1,6 @@
+AttributesName	AttributesDefinition
+Name	Name give to it individual
+Sex	Individual's sex (male or female)
+Treatment	Experimental treatment with different levels of acoustic information
+N_overlapping	Number of calls overlapping the acoustic model
+Freq_O	Frequence of calls overlapping the acoustic model (N_overlapping/N_treatment)
