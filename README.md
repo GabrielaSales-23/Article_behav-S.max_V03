@@ -85,3 +85,8 @@ dependence relationship between some scripts.
   script was used with behavioral data of the acoustic treatment
   experiment to find possible displacement behavioral through PERMANOVA,
   Friedman test and PCA analysis.
+
+- 03_Behav-Analysis_Acoustic-Exp_Permutation-test_2023-11-20: This
+  script was used to run the permutational ANOVA and evaluate possible
+  treatment differences in the display of displacement and aggressive
+  behaviors.
