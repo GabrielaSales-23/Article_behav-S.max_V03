@@ -43,6 +43,8 @@ Data folder contain two sub folders:
 * 08_Metadados_Acoustic-Analys_isVisual-Exp_Calls-frequency.txt: Metadata of table file "07_Acoustic-Data_Visual-Exp_Call-frequency.txt".
 * 08_Metadados_Acoustic-Analys_isVisual-Exp_Emission-rate.txt: Metada of table file "07_Acoustic-Data_Visual-Exp_Emission-rate.txt".
 
+3. eml_01_Behavioral-Data_Acoustic-Exp.xml - EML file with Metadata information of "01_Behavioral-Data_Acoustic-Exp.txt" data file.
+
 ## R folder
 
 The R folder contains all scripts made in R Studio software 4.3.2. 
@@ -55,3 +57,6 @@ The scripts are numbered in the best order to runing, since there are dependence
 
 * 03_Behav-Analysis_Acoustic-Exp_Permutation-test_2023-11-20: This script was used to run the permutational ANOVA and evaluate possible treatment differences in the display of displacement and aggressive behaviors.
 
+##EML_project
+
+The script contains de code for genarating the metadata file in .xml format. 
