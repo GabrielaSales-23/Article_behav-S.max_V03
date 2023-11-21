@@ -1,26 +1,26 @@
-AttributeName	AttributeDefinition
-ID	Identity code give to it individual
-Name	Name give to it individual
-Sex	Individual's sex (male or female)
-Treatment	Experimental treatment with different levels os acoustic information
-t_limp	"Duration (s) of emission of the behavior ""Autopreening"""
-n_limb	"Frequency of emission of the behavior ""Bill cleaning"""
-n_bat	"Frequency of emission of the behavior ""Flapping of wings"""
-n_abeb	"Frequency of emission of the behavior ""Bill opening"""
-n_trec	"Frequency of emission of the behavior ""Feather settling"""
-n_and	"Frequency of emission of the behavior ""Walking on the perch"""
-n_vooc	"Frequency of emission of the behavior ""Flight"""
-n_pulp	"Frequency of emission of the behavior ""Jump between perches"""
-n_darp	"Frequency of emission of the behavior ""Jumping laterally"""
-t_com	"Duration (s) of emission of the behavior ""Eating"""
-t_for	"Duration (s) of emission of the behavior ""Foragin"""
-n_def	"Frequency of emission of the behavior ""Defecation"""
-t_beb	"Duration (s) of emission of the behavior ""Drinking"""
-n_empg	"Frequency of emission of the behavior ""Perch in the cage"""
-t_obs	"Duration (s) of emission of the behavior ""Vigilance"""
-n_pulo	"Frequency of emission of the behavior ""Jump on the perch changing orientation"""
-n_estp	"Frequency of emission of the behavior ""Stretching neck"""
-t_cant	"Duration (s) of emission of the behavior ""Singing"""
-n_vocc	"Frequency of emission of the behavior ""Call"""
-t_rel	"Duration (s) of emission of the behavior ""Perching"""
-n_conf	"Frequency of emission of the behavior ""Confrontation"""
+attributeName	attributeDefinition	unit	numberType
+ID	Identity code give to it individual	NA	character
+Name	Name give to it individual	NA	character
+Sex	Sex of individuals male or female	NA	character
+Treatment	Experimental treatment with different levels os acoustic information	NA	character
+t_limp	Duration (s) of emission of the behavior Autopreening	seconds	decimal
+n_limb	Frequency of emission of the behavior Bill cleaning	NA	natural
+n_bat	Frequency of emission of the behavior Flapping of wings	NA	natural
+n_abeb	Frequency of emission of the behavior Bill opening	NA	natural
+n_trec	Frequency of emission of the behavior Feather settling	NA	natural
+n_and	Frequency of emission of the behavior Walking on the perch	NA	natural
+n_vooc	Frequency of emission of the behavior Flight	NA	natural
+n_pulp	Frequency of emission of the behavior Jump between perches	NA	natural
+n_darp	Frequency of emission of the behavior Jumping laterally	NA	natural
+t_com	Duration (s) of emission of the behavior Eating	seconds	decimal
+t_for	Duration (s) of emission of the behavior Foragin	seconds	decimal
+n_def	Frequency of emission of the behavior Defecation	NA	natural
+t_beb	Duration (s) of emission of the behavior Drinking	seconds	decimal
+n_empg	Frequency of emission of the behavior Perch in the cage	NA	natural
+t_obs	Duration (s) of emission of the behavior Vigilance	seconds	decimal
+n_pulo	Frequency of emission of the behavior Jump on the perch changing orientation	NA	natural
+n_estp	Frequency of emission of the behavior Stretching neck	NA	natural
+t_cant	Duration (s) of emission of the behavior Singing	seconds	decimal
+n_vocc	Frequency of emission of the behavior Call	NA	natural
+t_rel	Duration (s) of emission of the behavior Perching	seconds	decimal
+n_conf	Frequency of emission of the behavior Confrontation	NA	natural

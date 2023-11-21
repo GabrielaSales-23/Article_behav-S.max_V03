@@ -2,5 +2,6 @@ attributeName	attributeDefinition	unit	numberType
 Name	Name give to it individual	NA	caracther
 Sex	Sex of individuals 	NA	caracther
 Treatment	Experimental treatment with different levels os acoustic information	NA	caracther
-N_overlapping	Number of calls overlapping the acoustic model	NA	natural
-Freq_O	Frequence of calls overlapping the acoustic model (N_overlapping/N_treatment)	NA	decimal
+Freq25	Frequency at 25 of the call entropy 	hertz	decimal 
+Freq75	Frequency at 75 of the call entropy 	hertz	decimal 
+PeakFreq	Peak frequency of the call 	hertz	decimal 

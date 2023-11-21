@@ -1,7 +1,7 @@
 attributeName	attributeDefinition	unit	numberType
 Name	Name give to it individual	NA	caracther
 Sex	Sex of individuals 	NA	caracther
-Treatment	Experimental treatment with different levels os acoustic information	NA	caracther
+Treatment	Experimental treatment with different levels of visual information	NA	caracther
 N_treatment	Number of calls in each treatment	NA	natural
 Freq_treatment	Frequence of calls emited in each treatment (0 to 1)	NA	decimal
-Repetition_rate	Number of calls emited per minute 	hertz	decimal
+Repetition_rate	Number of calls emited per minute 	NA	decimal

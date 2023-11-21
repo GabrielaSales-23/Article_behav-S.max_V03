@@ -1,0 +1,8 @@
+attributeName	code	definition
+Sex	Female	subject sex
+Sex	Male	subject sex
+Treatment	100	level of information
+Treatment	90	level of information
+Treatment	75	level of information
+Treatment	50	level of information
+Treatment	0	level of information
