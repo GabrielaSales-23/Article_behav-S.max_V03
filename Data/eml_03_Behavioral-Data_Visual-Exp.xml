@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="08163042-f084-406b-a4b3-5b4592f13183" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <dataset>
+    <title>Behavioral data of Sporophila maximiliani during visual information quality experiment</title>
+    <creator id="https://orcid.org/0000-0002-9441-783X">
+      <individualName>
+        <givenName>Gabriela</givenName>
+        <givenName>Sales</givenName>
+        <surName>Santos</surName>
+      </individualName>
+      <electronicMailAddress>gabisalessantos@gmail.com</electronicMailAddress>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Lara</givenName>
+        <givenName>Louredo</givenName>
+        <surName>Leal</surName>
+      </individualName>
+      <role>Researcher</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Fausto</givenName>
+        <surName>Nomura</surName>
+      </individualName>
+      <role>Researcher</role>
+    </associatedParty>
+    <contact>
+      <individualName>
+        <givenName>Gabriela</givenName>
+        <givenName>Sales</givenName>
+        <surName>Santos</surName>
+      </individualName>
+      <organizationName>Universidade Federal de Goias</organizationName>
+      <address>
+        <deliveryPoint>Av. Esperança, s/n - Chacaras de Recreio Samambaia, 74690-900</deliveryPoint>
+        <city>Goiania</city>
+        <administrativeArea>GO</administrativeArea>
+        <country>Brazil</country>
+      </address>
+      <phone>62-3521-1474</phone>
+      <electronicMailAddress>gabisalessantos@gmail.com</electronicMailAddress>
+    </contact>
+    <dataTable>
+      <entityName>03_Behavioral-Data_Visual-Exp.txt</entityName>
+      <entityDescription>Behavioral data of the visual treatment experiment</entityDescription>
+      <physical>
+        <objectName>G:/Meu Drive/Mestrado/Projeto/Artigos/Experimento/BESocio/Article_behav-S.max_V03/data/03_Behavioral-Data_Visual-Exp.txt</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>ID</attributeName>
+          <attributeDefinition>Identity code give to it individual</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain/>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Name</attributeName>
+          <attributeDefinition>Name give to it individual</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain/>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Sex</attributeName>
+          <attributeDefinition>Sex of individuals </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Female</code>
+                    <definition>subject sex</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Male</code>
+                    <definition>subject sex</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Treatment</attributeName>
+          <attributeDefinition>Experimental treatment with different levels of visual information</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>100</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>50</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_limp</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Autopreening"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_limb</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Bill cleaning"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_abeb</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Bill opening"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_trec</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Feather settling"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_and</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Walking on the perch"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_vooc</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Flight"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_pulp</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Jump between perches"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_darp</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Jumping laterally"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_com</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Eating"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_def</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Defecation"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_beb</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Drinking"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_for</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Foragin"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_obs</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Vigilance"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_pulo</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Jump on the perch changing orientation"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_estp</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Stretching neck"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_cant</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Singing"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_vocc</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Call"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>t_rel</attributeName>
+          <attributeDefinition>Duration (s) of emission of the behavior "Perching"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>seconds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>decimal </numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>n_conf</attributeName>
+          <attributeDefinition>Frequency of emission of the behavior "Confrontation"</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>

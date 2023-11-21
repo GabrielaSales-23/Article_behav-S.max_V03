@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="3892ace8-5b79-418c-9106-c561d706c59e" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <dataset>
+    <title>Call of Sporophila maximiliani overalapping the playback during acoustic information quality experiment</title>
+    <creator id="https://orcid.org/0000-0002-9441-783X">
+      <individualName>
+        <givenName>Gabriela</givenName>
+        <givenName>Sales</givenName>
+        <surName>Santos</surName>
+      </individualName>
+      <electronicMailAddress>gabisalessantos@gmail.com</electronicMailAddress>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Lara</givenName>
+        <givenName>Louredo</givenName>
+        <surName>Leal</surName>
+      </individualName>
+      <role>Researcher</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Fausto</givenName>
+        <surName>Nomura</surName>
+      </individualName>
+      <role>Researcher</role>
+    </associatedParty>
+    <contact>
+      <individualName>
+        <givenName>Gabriela</givenName>
+        <givenName>Sales</givenName>
+        <surName>Santos</surName>
+      </individualName>
+      <organizationName>Universidade Federal de Goias</organizationName>
+      <address>
+        <deliveryPoint>Av. Esperança, s/n - Chacaras de Recreio Samambaia, 74690-900</deliveryPoint>
+        <city>Goiania</city>
+        <administrativeArea>GO</administrativeArea>
+        <country>Brazil</country>
+      </address>
+      <phone>62-3521-1474</phone>
+      <electronicMailAddress>gabisalessantos@gmail.com</electronicMailAddress>
+    </contact>
+    <dataTable>
+      <entityName>05_Acoustic-Data_Acoustic-Exp_Overlapping-calss.txt</entityName>
+      <entityDescription>Analysis of calls emited over the playback during acoustic treatment experiment</entityDescription>
+      <physical>
+        <objectName>G:/Meu Drive/Mestrado/Projeto/Artigos/Experimento/BESocio/Article_behav-S.max_V03/data/05_Acoustic-Data_Acoustic-Exp_Emission-rate.txt</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Name</attributeName>
+          <attributeDefinition>Name give to it individual</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain/>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Sex</attributeName>
+          <attributeDefinition>Sex of individuals </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Female</code>
+                    <definition>subject sex</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Male</code>
+                    <definition>subject sex</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Treatment</attributeName>
+          <attributeDefinition>Experimental treatment with different levels os acoustic information</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>100</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>90</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>75</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>50</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>level of information</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>N_overlapping</attributeName>
+          <attributeDefinition>Number of calls overlapping the acoustic model</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Freq_O</attributeName>
+          <attributeDefinition>Frequence of calls overlapping the acoustic model (N_overlapping/N_treatment)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <numericDomain>
+                <numberType>decimal</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>
