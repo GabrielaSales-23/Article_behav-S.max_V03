@@ -8,17 +8,18 @@ mod.geral<- adonis2(Transf.behaviors~Treatment*Sex, data=grups,strata=grups$Name
 mod.geral
 
 #PCA 
-install.packages("Factoshiny")
 library(Factoshiny)
 
 View(Data_Acoustic.Exp)
 
-Data<- scale(Data_Acoustic.Exp_Final[5:17]) #applying scale transformation recommended for PCA analyses with data with variables in different metrics 
-Data.p <- bind_cols(Data_Acoustic.Exp_Final[,c("ID","Name", "Sex","Treatment")], Data)
+Data<- scale(Data_Acoustic.Exp[5:17]) #applying scale transformation recommended for PCA analyses with data with variables in different metrics 
+Data.p <- bind_cols(Data_Acoustic.Exp[,c("ID","Name", "Sex","Treatment")], Data)
 Data.pca = Data.p %>% mutate(ID = NULL, Name=NULL, Sex=NULL)
 View(Data.pca)
 
 general_pca<- PCAshiny(Data.pca)
+
+## besides maintanence and alert behaviors, n_def, t_com and n_pulp have great contribute to variability 
 
 #PERMANOVA maintanance behaviors
 
@@ -26,8 +27,8 @@ mod.man<-adonis2(behav_man~Treatment*Sex, data=grups,strata=grups$Name, perm=100
 mod.man
 
 #PCA maintenance behaviors
-Data_man<- scale(Data_Acoustic.Exp_Final[,c("t_limp","n_limb","n_abeb","n_trec")])
-Data_man <- bind_cols(Data_Acoustic.Exp_Final[,c("ID","Name", "Sex","Treatment")], Data_man)
+Data_man<- scale(Data_Acoustic.Exp[,c("t_limp","n_limb","n_abeb","n_trec")])
+Data_man <- bind_cols(Data_Acoustic.Exp[,c("ID","Name", "Sex","Treatment")], Data_man)
 Data_man.pca = Data_man %>% mutate(ID = NULL, Name=NULL, Sex=NULL)
 View(Data_man.pca)
 
@@ -39,8 +40,8 @@ mod.ale<-adonis2(behav_alert~Treatment*Sex, data=grups, strata=grups$Name, perm=
 mod.ale
 
 #PCA alert behaviors
-Data_alert <- scale(Data_Acoustic.Exp_Final[,c("n_empg","t_obs","n_pulo","n_estp")])
-Data_alert <- bind_cols(Data_Acoustic.Exp_Final[,c("ID","Name", "Sex","Treatment")], Data_alert)
+Data_alert <- scale(Data_Acoustic.Exp[,c("n_empg","t_obs","n_pulo","n_estp")])
+Data_alert <- bind_cols(Data_Acoustic.Exp[,c("ID","Name", "Sex","Treatment")], Data_alert)
 Data_alert.pca = Data_alert %>% mutate(ID = NULL, Name=NULL, Sex=NULL)
 View(Data_alert.pca)
 
