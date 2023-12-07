@@ -41,8 +41,5 @@ summary(m_n_estp)
 m_t_com <- aovperm(t_com ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_t_com)
 
-m_t_rel <- aovperm(t_rel ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
-summary(m_t_rel)
-
 m_n_pulp <- aovperm(n_pulp ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_n_pulp)
