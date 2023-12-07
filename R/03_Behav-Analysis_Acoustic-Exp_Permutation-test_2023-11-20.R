@@ -43,10 +43,11 @@ m_n_abeb <- aovperm(n_abeb ~ Treatment*Sex+Error(Name/Treatment), data = Data_Ac
 summary(m_n_abeb)
 boxplot(n_abeb~Treatment, col = c("green", "red", "blue", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of bill opening", labels="Frequency of bill opening in each treatment", data = Data_Acoustic.Exp_Final)
 
+library(ggplot2)
 ggplot(Data_Acoustic.Exp_Final, aes(y = n_abeb, x = Treatment)) +
   geom_bar(stat = "identity", fill = "tomato")+
   xlab("Treatment") + 
-  ylab("Frequeny of bill opening") 
+  ylab("Frequency of bill opening") 
 
 m_n_limb <- aovperm(n_limb ~ Treatment*Sex+Error(Name/Treatment), data = Data_Acoustic.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_n_limb)
