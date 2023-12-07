@@ -1,36 +1,3 @@
-#Permutation ANOVA
-library(RVAideMemoire)
-perm.anova(n_trec ~ Treatment*Sex|Name, data = Data_Acoustic.Exp_Final, nperm=999)
-
-summary(Data_Acoustic.Exp_Final$Name)
-table(Data_Acoustic.Exp_Final$Name)
-
-sum(Data_Acoustic.Exp_Final$Treatment == "100")
-sum(Data_Acoustic.Exp_Final$Treatment == "90")
-sum(Data_Acoustic.Exp_Final$Treatment == "75")
-sum(Data_Acoustic.Exp_Final$Treatment == "50")
-sum(Data_Acoustic.Exp_Final$Treatment == "0")
-
-sum(Data_Acoustic.Exp_Final$Sex == "M")
-sum(Data_Acoustic.Exp_Final$Sex == "F")
-
-Data_Acoustic.Exp_Final$Name
-
-#Opting for unbalanced data
-library(car)
-model <- aov(n_trec ~ Treatment * Sex + Error(Name/(Treatment*Sex)), data = Data_Acoustic.Exp_Final)
-drop1(model, test = "F")
-
-summary(model)
-
-#Grafic
-
-boxplot(trec~Treatment, col = c("green", "red", "blue", "orange", "black"), xlab="Treatment", ylab= "Frequeny of feather settling", labels="Frequency of feather settling in each treatment")
-ggplot(Data_Acoustic.Exp_Final, aes(y = n_trec, x = Treatment)) +
-  geom_bar(stat = "identity", fill = "tomato")+
-  xlab("Treatment") + 
-  ylab("Frequeny of feather settling") 
-
 ## Permutation ANOVA
 library(permuco)
 
