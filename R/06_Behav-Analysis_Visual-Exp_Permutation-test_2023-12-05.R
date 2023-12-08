@@ -43,3 +43,6 @@ summary(m_t_com)
 
 m_n_pulp <- aovperm(n_pulp ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_n_pulp)
+
+m_n_vooc <- aovperm(n_vooc ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
+summary(m_n_vooc)

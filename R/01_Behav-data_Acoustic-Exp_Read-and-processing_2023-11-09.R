@@ -9,7 +9,7 @@ summary(Data_Acoustic.Exp)
 is.na(Data_Acoustic.Exp)
 sum(is.na(Data_Acoustic.Exp))
 
-## Cheking variable type
+## Checking variable type
 library(dplyr)
 glimpse(Data_Acoustic.Exp)
 
@@ -18,19 +18,19 @@ Data_Acoustic.Exp$ID <- as.character(Data_Acoustic.Exp$ID)
 
 ## Removing rare behaviors (n_and, n_vooc, n_darp, t_for, t_beb,t_cant, n_conf)
 
-Data_Acoustic.Exp <- Data_Acoustic.Exp[,c(1,2,3,4,5,6,7,8,9,12,14,16,18,19,20,21,23,24)]
+Data_Acoustic.Exp <- Data_Acoustic.Exp[,c(1,2,3,4,5,6,7,8,9,11,12,13,14,16,18,19,20,21,23,24)]
 
 # Hellinger transformation to minimize zeros effects
 
 library(vegan)
-Transf.behaviors <- decostand((Data_Acoustic.Exp[,c("n_pulp",
+Transf.behaviors <- decostand((Data_Acoustic.Exp[,c("n_pulp","n_vooc","n_darp",
                                  "t_limp","n_limb","n_abeb","n_trec",
                                  "n_empg","t_obs","n_pulo","n_estp",
                                  "n_def","t_com",
                                  "n_vocc",
                                  "t_rel")]), "hellinger")
 View(Transf.behaviors)
-behav_loc<-Transf.behaviors[,c("n_pulp")]
+behav_loc<-Transf.behaviors[,c("n_pulp","n_darp","n_vooc")]
 behav_man<-Transf.behaviors[,c("t_limp","n_limb","n_abeb","n_trec")]
 behav_alert<-Transf.behaviors[,c("n_empg","t_obs","n_pulo","n_estp")]
 behav_alim<-Transf.behaviors[,c("n_def","t_com")]
