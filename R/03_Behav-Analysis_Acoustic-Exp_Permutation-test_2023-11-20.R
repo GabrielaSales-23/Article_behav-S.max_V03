@@ -8,7 +8,11 @@ summary(m_n_trec)
 
 m_n_abeb <- aovperm(n_abeb ~ Treatment*Sex+Error(Name/Treatment), data = Data_Acoustic.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_n_abeb)
-boxplot(n_abeb~Treatment, col = c("green", "red", "blue", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of bill opening", labels="Frequency of bill opening in each treatment", data = Data_Acoustic.Exp_Final)
+
+# ploting
+Data_Acoustic.Exp$Treatment <- factor(Data_Acoustic.Exp$Treatment, 
+                                            levels = c("100", "90", "75", "50", "0"))
+boxplot(n_abeb~Treatment, col = c("green", "blue","red", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of bill opening", labels="Frequency of bill opening in each treatment", data = Data_Acoustic.Exp)
 
 library(ggplot2)
 ggplot(Data_Acoustic.Exp_Final, aes(y = n_abeb, x = Treatment)) +
