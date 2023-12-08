@@ -6,7 +6,10 @@ library(permuco)
 m_n_trec <- aovperm(n_trec ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_n_trec)
 
-boxplot(n_trec~Treatment, col = c("green", "red", "blue", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of feather settling", labels="Frequency of feather settling in each treatment", data = Data_Visual.Exp_Final)
+# ploting the boxplot
+Data_Visual.Exp$Treatment <- factor(Data_Visual.Exp$Treatment, 
+                                    levels = c("100", "50", "0"))
+boxplot(n_trec~Treatment, col = c("green", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of feather settling", labels="Frequency of feather settling in each treatment", data = Data_Visual.Exp)
 
 ggplot(Data_Visual.Exp_Final, aes(y = n_trec, x = Treatment)) +
   geom_bar(stat = "identity", fill = "tomato")+
@@ -24,7 +27,9 @@ summary(m_n_limb)
 m_t_obs <- aovperm(t_obs ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visual.Exp_Final, np = 1000, method = NULL, type = "permutation")
 summary(m_t_obs)
 
-boxplot(t_obs~Treatment, col = c("green", "red", "blue", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of vigilance", labels="Frequency of vigilance in each treatment", data = Data_Visual.Exp_Final)
+# ploting the boxplot
+boxplot(t_obs~Treatment, col = c("green", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of vigilance", labels="Frequency of vigilance in each treatment", data = Data_Visual.Exp)
+
 ggplot(Data_Visual.Exp_Final, aes(y = t_obs, x = Treatment)) +
   geom_bar(stat = "identity", fill = "tomato")+
   xlab("Treatment") + 
