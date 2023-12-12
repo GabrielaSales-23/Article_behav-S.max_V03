@@ -6,7 +6,8 @@ View(Call_Data_Acoustic_Exp)
 library(dplyr)
 glimpse(Call_Data_Acoustic_Exp)
 Call_Data_Acoustic_Exp$Treatment <- as.character(Call_Data_Acoustic_Exp$Treatment)
-
+Call_Data_Acoustic_Exp$Treatment <- factor(Call_Data_Acoustic_Exp$Treatment, 
+                                      levels = c("100", "90", "75", "50", "0"))
 #Exploring data
 
 hist(Call_Data_Acoustic_Exp$Freq25)
@@ -17,6 +18,8 @@ library(lme4)
 library(car)
 library(ggpubr)
 library(dados)
+library(visreg)
+library(visreg)
 
 #model gaussian
 model_gau <- lmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp)
@@ -26,28 +29,27 @@ plot(resid(model_gau))
 hist(resid(model_gau))
 ggqqplot(resid(model_gau))
 plot(model_gau)
-visreg(model_gau, "Treatment", by = "Sex", overlay = TRUE, main = "A")
+visreg(model_gau, "Treatment", by = "Sex", overlay = TRUE)
 
-#modal gamma link inverse
-model_gamma <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "inverse"))
-summary(model_gamma)
-Anova(model_gamma)
-plot(resid(model_gamma))
-hist(resid(model_gamma))
-ggqqplot(resid(model_gamma))
-plot(model_gamma)
-library(visreg)
-visreg(model_gamma, "Treatment", by = "Sex", overlay = TRUE, main = "A")
+#model gamma link inverse
+model_gamma_75 <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "inverse"))
+summary(model_gamma_75)
+Anova(model_gamma_75)
+plot(resid(model_gamma_75))
+hist(resid(model_gamma_75))
+ggqqplot(resid(model_gamma_75))
+plot(model_gamma_75)
+visreg(model_gamma_75, "Treatment", by = "Sex", overlay = TRUE)
 
 #model gamma link log
-model_gamma_log <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "log"))
-summary(model_gamma_log)
-Anova(model_gamma_log)
-plot(resid(model_gamma_log))
-hist(resid(model_gamma_log))
-ggqqplot(resid(model_gamma_log))
-plot(model_gamma_log)
-visreg(model_gamma_log, "Treatment", by = "Sex", overlay = TRUE, main = "A")
+model_gamma_log_75 <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "log"))
+summary(model_gamma_log_75)
+Anova(model_gamma_log_75)
+plot(resid(model_gamma_log_75))
+hist(resid(model_gamma_log_75))
+ggqqplot(resid(model_gamma_log_75))
+plot(model_gamma_log_75)
+visreg(model_gamma_log_75, "Treatment", by = "Sex", overlay = TRUE)
 visreg(model_gamma_log)
 
 library(MuMIn)
@@ -60,3 +62,50 @@ gamma_AIC
 
 gammaLog_AIC=dredge(model_gamma_log, rank = "AIC")
 gammaLog_AIC
+
+##Freq25
+
+#modal gamma link inverse
+model_gamma_25 <- glmer(Freq25~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "inverse"))
+summary(model_gamma_25)
+Anova(model_gamma_25)
+plot(resid(model_gamma_25))
+hist(resid(model_gamma_25))
+ggqqplot(resid(model_gamma_25))
+plot(model_gamma_25)
+visreg(model_gamma_25, "Treatment", by = "Sex", overlay = TRUE)
+
+#model gamma link log
+model_gamma_log_25 <- glmer(Freq25~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "log"))
+summary(model_gamma_log_25)
+Anova(model_gamma_log_25)
+plot(resid(model_gamma_log_25))
+hist(resid(model_gamma_log_25))
+ggqqplot(resid(model_gamma_log_25))
+plot(model_gamma_log_25)
+visreg(model_gamma_log_25, "Treatment", by = "Sex", overlay = TRUE)
+visreg(model_gamma_log_25)
+
+##PeakFreq
+
+model_gamma_Peak <- glmer(PeakFreq~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "inverse"))
+summary(model_gamma_Peak)
+Anova(model_gamma_Peak)
+plot(resid(model_gamma_Peak))
+hist(resid(model_gamma_Peak))
+ggqqplot(resid(model_gamma_Peak))
+plot(model_gamma_Peak)
+visreg(model_gamma_Peak, "Treatment", by = "Sex", overlay = TRUE)
+
+#model gamma link log
+model_gamma_log_Peak <- glmer(PeakFreq~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "log"))
+summary(model_gamma_log_Peak)
+Anova(model_gamma_log_Peak)
+plot(resid(model_gamma_log_Peak))
+hist(resid(model_gamma_log_Peak))
+ggqqplot(resid(model_gamma_log_Peak))
+plot(model_gamma_log_Peak)
+visreg(model_gamma_log_Peak, "Treatment", by = "Sex", overlay = TRUE)
+visreg(model_gamma_log_Peak)
+
+

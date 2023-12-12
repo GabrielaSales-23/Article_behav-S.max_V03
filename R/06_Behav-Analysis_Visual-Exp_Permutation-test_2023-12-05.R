@@ -28,7 +28,7 @@ m_t_obs <- aovperm(t_obs ~ Treatment*Sex+Error(Name/Treatment), data = Data_Visu
 summary(m_t_obs)
 
 # ploting the boxplot
-boxplot(t_obs~Treatment, col = c("green", "orange", "yellow"), xlab="Treatment", ylab= "Frequeny of vigilance", labels="Frequency of vigilance in each treatment", data = Data_Visual.Exp)
+boxplot(t_obs~Treatment, col = c("green", "orange", "yellow"), xlab="Treatment", ylab= "Time of vigilance", labels="Time of vigilance in each treatment", data = Data_Visual.Exp)
 
 ggplot(Data_Visual.Exp_Final, aes(y = t_obs, x = Treatment)) +
   geom_bar(stat = "identity", fill = "tomato")+

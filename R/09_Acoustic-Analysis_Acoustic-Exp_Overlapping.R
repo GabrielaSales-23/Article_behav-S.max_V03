@@ -7,7 +7,7 @@ View(Overlapping_Data_Acoustic_Exp)
 #GLMM model
 library(dplyr)
 glimpse(Overlapping_Data_Acoustic_Exp)
-Overlapping_Data_Acoustic_Exp$Treatment <- as.character(Overlapping_Data_Acoustic_Exp$Treatment)
+Overlapping_Data_Acoustic_Exp$Treatment <- as.factor(Overlapping_Data_Acoustic_Exp$Treatment)
 
 hist(Overlapping_Data_Acoustic_Exp$N_overlapping)
 
