@@ -20,16 +20,6 @@ library(car)
 library(ggpubr)
 library(dados)
 
-#model gaussian
-model_gau <- lmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Visual_Exp)
-summary(model)
-Anova(model_gau)
-plot(resid(model_gau))
-hist(resid(model_gau))
-ggqqplot(resid(model_gau))
-plot(model_gau)
-visreg(model_gau, "Treatment", by = "Sex", overlay = TRUE, main = "A")
-
 #modal gamma link inverse
 model_gamma <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Visual_Exp, family = Gamma(link = "inverse"))
 summary(model_gamma)
@@ -38,7 +28,7 @@ plot(resid(model_gamma))
 hist(resid(model_gamma))
 ggqqplot(resid(model_gamma))
 plot(model_gamma)
-visreg(model_gamma, "Treatment", by = "Sex", overlay = TRUE, main = "A")
+visreg(model_gamma, "Treatment", by = "Sex", overlay = TRUE)
 
 #model gamma link log
 model_gamma_log <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Visual_Exp, family = Gamma(link = "log"))
@@ -48,5 +38,5 @@ plot(resid(model_gamma_log))
 hist(resid(model_gamma_log))
 ggqqplot(resid(model_gamma_log))
 plot(model_gamma_log)
-visreg(model_gamma_log, "Treatment", by = "Sex", overlay = TRUE, main = "A")
+visreg(model_gamma_log, "Treatment", by = "Sex", overlay = TRUE)
 visreg(model_gamma_log)

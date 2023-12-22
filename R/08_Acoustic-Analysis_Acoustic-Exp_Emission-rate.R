@@ -32,8 +32,3 @@ m_freq <- glmer.nb(Freq_treatment~Treatment*Sex+(1|Name), data = Rate_Data_Acous
 plot(m_freq)
 plot(resid(m_freq))
 Anova(m_freq)
-
-#Permutation anova 
-
-library(permuco)
-m_freq <- aovperm(Freq_treatment~Treatment*Sex+Error(Name/Treatment), data=Rate_Data_Acoustic_Exp, np=999, type = "permutation")

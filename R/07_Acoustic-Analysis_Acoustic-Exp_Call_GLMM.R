@@ -21,16 +21,6 @@ library(dados)
 library(visreg)
 library(visreg)
 
-#model gaussian
-model_gau <- lmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp)
-summary(model_gau)
-Anova(model_gau)
-plot(resid(model_gau))
-hist(resid(model_gau))
-ggqqplot(resid(model_gau))
-plot(model_gau)
-visreg(model_gau, "Treatment", by = "Sex", overlay = TRUE)
-
 #model gamma link inverse
 model_gamma_75 <- glmer(Freq75~Treatment*Sex + (1|Name), data = Call_Data_Acoustic_Exp, family = Gamma(link = "inverse"))
 summary(model_gamma_75)
@@ -54,8 +44,6 @@ visreg(model_gamma_log)
 
 library(MuMIn)
 options(na.action = "na.fail") 
-gau_AIC=dredge(model_gau, rank="AIC")
-gau_AIC
 
 gamma_AIC=dredge(model_gamma, rank = "AIC")
 gamma_AIC
