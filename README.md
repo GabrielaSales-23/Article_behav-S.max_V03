@@ -23,7 +23,27 @@ and described bellow:
 
 Data folder contain two sub folders:
 
-1.  Raw - Data in the way it was collected.
+1.  Raw - Data in the way it was collected from Boris software
+    (behavioral data) and Raven Pro (acoustic data)
+
+- 01_Behav-data_Acoustic-exp_Females.xlsx: duration and frequency of
+  female’s display of each behavior of *Sporophila maximiliani*
+  repertoire during acoustic experiment.
+- 02-Behav-data_Acoustic-exp_Males.xlsx: duration and frequency of
+  male’s display of each behavior of *Sporophila maximiliani* repertoire
+  during acoustic experiment.
+- 03_Behav-data_Visual-exp_Females.xlsx: duration and frequency of
+  female’s display of each behavior of *Sporophila maximiliani*
+  repertoire during visual experiment.
+- 04_Behav-data_Visual-exp_Males.xlsx: duration and frequency of male’s
+  display of each behavior of *Sporophila maximiliani* repertoire during
+  visual experiment.
+- 05_Acoustic-data_Acoustic-exp_Males.xlsx: acoustic parameters of
+  subjects calls.
+- 06_Acoustic-data_Acoustic-exp_Females.xlsx: acoustic parameters of
+  subjects calls.
+- 07_Acoustic-data_Visual-exp.xlsx: acoustic parameters of subjects
+  calls.
 
 2.  Processed - Data in a table format suitable for sctatistical
     analysis. In this folder all table files are in two formats (.xlsx
@@ -66,11 +86,13 @@ Data folder contain two sub folders:
 - 08_Metadados_Acoustic-Analys_isVisual-Exp_Calls-frequency.txt:
   Metadata of table file
   “07_Acoustic-Data_Visual-Exp_Call-frequency.txt”.
-- 08_Metadados_Acoustic-Analys_isVisual-Exp_Emission-rate.txt: Metada of
-  table file “07_Acoustic-Data_Visual-Exp_Emission-rate.txt”.
+- 08_Metadados_Acoustic-Analys_isVisual-Exp_Emission-rate.txt: Metadata
+  of table file “07_Acoustic-Data_Visual-Exp_Emission-rate.txt”.
+- 09_Metadados_Acoustic-Exp_levels.txt: levels of the acoustic
+  treatments.
+- 010_Metadados_Visual-Exp_levels.txt: levels of the visual treatments.
 
-3.  eml_01_Behavioral-Data_Acoustic-Exp.xml - EML file with Metadata
-    information of “01_Behavioral-Data_Acoustic-Exp.txt” data file.
+3.  All metadata files are also available in XML format.
 
 ## R folder
 
@@ -79,22 +101,42 @@ The R folder contains all scripts made in R Studio software 4.3.2.
 The scripts are numbered in the best order to runing, since there are
 dependence relationship between some scripts.
 
-- 01_Supp_Displacement-behav_Acoustic-Exp_Read-and-processing_2023-11-09:
-  This script was used with behavioral data collected in the acoustic
-  treatment experiment to: reading, viewing, correction of variable
-  category and data transformation for the statistical analyze.
-
+- 01_Behav-data_Acoustic-Exp_Read-and-processing_2023-11-09: This script
+  was used with behavioral data collected in the acoustic treatment
+  experiment to reading, viewing, correction of variable category and
+  data transformation for the statistical analyze.
 - 02_Supp_Displacement-behav_Acoustic-Exp_Analyse_2023-11-10: This
   script was used with behavioral data of the acoustic treatment
-  experiment to find possible displacement behavioral through PERMANOVA,
-  Friedman test and PCA analysis.
-
+  experiment to find possible displacement behavioral through PCA
+  analysis.
 - 03_Behav-Analysis_Acoustic-Exp_Permutation-test_2023-11-20: This
   script was used to run the permutational ANOVA and evaluate possible
   treatment differences in the display of displacement and aggressive
-  behaviors.
+  behaviors. Script for graphic results are also in this file.
+- 04_Behav-data_Visual-Exp_Read-and-processing_2023-12-05: This script
+  was used with behavioral data collected in the visual treatment
+  experiment to reading, viewing, correction of variable category and
+  data transformation for the statistical analyze.
+- 05_Supp_Displacement-behav_Visual-Exp_Analyse_2023-12-05: This script
+  was used with behavioral data of the visual treatment experiment to
+  find possible displacement behavioral through PCA analysis.
+- 06_Behav-Analysis_Visual-Exp_Permutation-test_2023-12-05: This script
+  was used to run the permutational ANOVA and evaluate possible
+  treatment differences in the display of displacement and aggressive
+  behaviors. Script for graphic results are also in this file.
+- 07_Acoustic-Analysis_Acoustic-Exp_Call_GLMM: Script with general mixed
+  model to value the effect of acoustic treatments in parameters of
+  calls.
+- 08_Acoustic-Analysis_Acoustic-Exp_Emission-rate: Script with general
+  mixed model to emission rate analysis in the acoustic experiment.
+- 09_Acoustic-Analysis_Acoustic-Exp_Overlapping: Script with general
+  mixed model to overlapping analysis.
+- 010_Acoustic-Analysis_Visual-Exp_Call_GLMM: Script with general mixed
+  model to value the effect of visual treatments in parameters of calls.
+- 011_Acoustic-Analysis_Visual-Exp_Emission-rate: Script with general
+  mixed model to emission rate analysis in the visual experiment.
 
-\##EML_project
+## EML_project
 
 The script contains de code for genarating the metadata file in .xml
 format.
