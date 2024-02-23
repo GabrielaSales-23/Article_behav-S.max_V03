@@ -1,5 +1,5 @@
 
-# Communication breakdown! How information loss affects behavioral responses in the Great-Billed Seed-Finch, *Sporophila maximiliani* (Thraupidae: Passeriformes)
+# Communication breakdown! Signal modality drives the effect of information loss on the behavioral responses of the threatened Great-Billed Seed-Finch, Sporophila maximiliani (Thraupidae: Passeriformes)
 
 This repository contains all data and R script of statistical analysis
 used to investigate the role of information quality in the behavior of
